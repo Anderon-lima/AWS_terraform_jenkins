@@ -10,7 +10,7 @@ variable "aws_az" {
 
 variable "key_name" {
   description = "The key name to use for the instance"
-  default     = "jenkins_terraorm"
+  default     = "jenkins_terraform"
 }
 
 variable "vpc_cidr" {
