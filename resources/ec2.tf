@@ -22,7 +22,7 @@ resource "aws_instance" "jenkins" {
   availability_zone = "${var.aws_az}"
   instance_type = "t2.micro"
   key_name = "${var.key_name}"
-  vpc_security_group_ids = ["${aws_security_group.jalles_sg.id}"]
+  vpc_security_group_ids = ["${aws_security_group.jenkins.id}"]
   subnet_id = "${aws_subnet.subnet_publica.id}"
   associate_public_ip_address = true
   tags = {
@@ -31,5 +31,5 @@ resource "aws_instance" "jenkins" {
   credit_specification {
     cpu_credits = "standard"
   }
-  user_data = "${file("../scripts/activemq.sh")}"
+  #user_data = "${file("../scripts/jenkins.sh")}"
 }

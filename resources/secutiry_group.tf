@@ -51,7 +51,7 @@ resource "aws_security_group" "jenkins" {
     cidr_blocks     = ["0.0.0.0/0"]
   }
 
-  vpc_id="${aws_vpc.default.id}"
+  vpc_id="${aws_vpc.vpc_jenkins.id}"
 
   tags = {
     Name = "Jenkins_SG"
