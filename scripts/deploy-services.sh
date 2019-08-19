@@ -10,23 +10,11 @@ mkdir -p /opt/ci
 cat <<EOF >> /opt/ci/docker-compose.yml
 version: "3"
 networks:
-  nexus:
   jenkins:
 volumes:
-  nexus-data:
   jenkins-data:
   portainer-data:
 services:
-  nexus:
-    image: sonatype/nexus3
-    container_name: nexus3
-    volumes:
-      - nexus-data:/nexus-data
-    ports:
-      - "8081:8081"
-    networks:
-      - nexus
-    restart: always
   jenkins:
     image: jenkins/jenkins
     container_name: jenkins
