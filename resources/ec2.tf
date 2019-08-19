@@ -31,5 +31,5 @@ resource "aws_instance" "jenkins" {
   credit_specification {
     cpu_credits = "standard"
   }
-  user_data = "${file("../scripts/jenkins.sh")}"
+  user_data = "${file("../scripts/deploy-services.sh")}"
 }
