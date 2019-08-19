@@ -23,7 +23,7 @@ services:
     volumes:
       - nexus-data:/nexus-data
     ports:
-      - 8081:8081
+      - "8081:8081"
     networks:
       - nexus
     restart: always
