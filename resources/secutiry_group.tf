@@ -9,32 +9,32 @@ resource "aws_security_group" "jenkins" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
-    from_port = 8161
-    to_port = 8161
+    from_port = 8080
+    to_port = 8080
     protocol = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
-    from_port = 61616
-    to_port = 61616
+    from_port = 5000
+    to_port = 5000
     protocol = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
-    from_port = 443
-    to_port = 443
+    from_port = 50000
+    to_port = 50000
     protocol = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
-    from_port = 10050
-    to_port = 10050
+    from_port = 9000
+    to_port = 9000
     protocol = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
-    from_port = 10051
-    to_port = 10051
+    from_port = 8081
+    to_port = 8081
     protocol = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
