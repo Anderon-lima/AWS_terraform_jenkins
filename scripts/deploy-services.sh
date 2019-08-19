@@ -6,7 +6,7 @@ echo "Instalando o Docker Compose"
 apt-get install docker-compose -y
 mkdir -p /opt/ci
 
-#CRIA ARQUIVO activemq.properties
+#Criando docker-compose com PortainerIO, Jenkins e SonatypeNexus3
 cat <<EOF >> /opt/ci/docker-compose.yml
 version: "3"
 networks:
